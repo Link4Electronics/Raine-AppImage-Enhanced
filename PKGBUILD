@@ -28,10 +28,16 @@ prepare() {
   # adapt folder structure to arch standards
   sed 's|$(prefix)/games|\$(prefix)/bin|;s|$(prefix)/share/games|\$(prefix)/share|' -i makefile
   sed 's|share/games/raine|share/raine|' -i source/sdl/dialogs/about.cpp source/raine.c
+  sed -i -e 's|#include "debug.h"|#include "../../debug.h"|g' -e 's|#include "dasm.h"|#include "../../dasm.h"|g' source/mame/z80/z80dasm.c
+  sed -i -e 's|#include "deftypes.h"|#include "../../deftypes.h"|g' -e 's|#include "mame/pair.h"|#include "../pair.h"|g' source/mame/z80/z80.h
+  sed -i -e 's|#include "debug.h"|#include "../../debug.h"|g' -e 's|#include "dasm.h"|#include "../../dasm.h"|g' source/mame/6502/6502dasm.c
+  sed -i -e 's|#include "deftypes.h"|#include "../../deftypes.h"|g' -e 's|#include "mame/pair.h"|#include "../pair.h"|g' -e 's|#include "mame/handlers.h"|#include "../handlers.h"|g' source/mame/6502/m6502.h
+  sed -i 's|#include "debug.h"|#include "../debug.h"|g' source/mame/handlers.h
+  sed -i 's/^RAINE_DEBUG = 1/#RAINE_DEBUG = 1/' makefile
 }
 
 build() {
-  make NO_ASM=1 -C "$srcdir"/raine-$pkgver #VERBOSE=1
+  make NO_ASM=1 -C "$srcdir"/raine-$pkgver CFLAGS+="-Wno-implicit-function-declaration" #VERBOSE=1
 }
 
 package() {
