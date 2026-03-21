@@ -9,7 +9,7 @@ pkgdesc="A multiple arcade emulator focused on 680x0/z80 machines like
 NeoCD and Neo Geo, C version"
 url="http://raine.1emulation.com/"
 license=('custom')
-arch=('x86_64')
+arch=('x86_64' 'aarch64')
 replaces=('neoraine','raine64')
 depends_x86_64=('sdl2' 'sdl2_ttf' 'sdl2_image' 'curl' 'openssl' 'lua')
 makedepends=('mesa')
