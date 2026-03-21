@@ -15,8 +15,7 @@ depends_x86_64=('sdl2' 'sdl2_ttf' 'sdl2_image' 'curl' 'openssl' 'lua')
 makedepends=('mesa')
 optdepends=('raine-emudx: improved graphic and sound files for some classic games')
 source=(raine-$pkgver.tar.gz::"https://github.com/zelurker/raine/archive/$pkgver.tar.gz")
-sha256sums=('43c9e642fcd4d524e2e73204e1098cde0e24acf56eede638a9644318886ee85d')
-#sha256sums=('d1ee4dd556058e7ca77b474c065f9c7c1889cefe0d2e02ea39c512931ef2b1dd')
+sha256sums=('d1ee4dd556058e7ca77b474c065f9c7c1889cefe0d2e02ea39c512931ef2b1dd')
 options=('emptydirs')
 
 prepare() {
