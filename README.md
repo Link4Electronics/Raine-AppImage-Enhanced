@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Raine-AppImage-Enhanced)](https://github.com/pkgforge-dev/Raine-AppImage-Enhanced/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/zelurker/raine/blob/master/raine.png" width="128" />
+  <img src="https://github.com/zelurker/raine/blob/master/raine.ico?raw" width="128" />
 </p>
 
 
